@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.coil.compose)
     implementation(projects.shared)
     implementation(libs.compose.ui)
     implementation(libs.compose.ui.tooling.preview)

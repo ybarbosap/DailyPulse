@@ -16,8 +16,11 @@ class ArticlesViewModel : BaseViewModel() {
 
     private fun getArticles() {
         vmScope.launch {
+            delay(1500)
+            _articlesState.emit(ArticlesState(isLoading = true))
+            delay(1500)
+            _articlesState.emit(ArticlesState(error = "Something wrong"))
             val articles = fetchArticles()
-            delay(500)
             _articlesState.emit(ArticlesState(articles))
         }
     }
