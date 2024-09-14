@@ -8,18 +8,19 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.petros.efthymiou.dailypulse.Greeting
+import com.petros.efthymiou.dailypulse.Platform
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContent {
             MyApplicationTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    GreetingView(Greeting().greet())
+                    AboutScreen()
                 }
             }
         }
@@ -35,6 +36,6 @@ fun GreetingView(text: String) {
 @Composable
 fun DefaultPreview() {
     MyApplicationTheme {
-        GreetingView("Hello, Android!")
+        AboutScreen()
     }
 }
