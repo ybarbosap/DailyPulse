@@ -39,6 +39,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.navigation.compose)
     implementation(libs.coil.compose)
     implementation(projects.shared)
     implementation(libs.compose.ui)

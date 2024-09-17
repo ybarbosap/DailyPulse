@@ -13,6 +13,10 @@
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 		CA5B534B2C93CEE600F61B00 /* AboutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5B534A2C93CEE600F61B00 /* AboutListView.swift */; };
 		CA5B534D2C93D39700F61B00 /* AboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5B534C2C93D39700F61B00 /* AboutScreen.swift */; };
+		CAA3B2422C960D0C00B1754B /* ArticlesScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3B2412C960D0C00B1754B /* ArticlesScreen.swift */; };
+		CAA3B2452C960DC300B1754B /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3B2442C960DC300B1754B /* Loader.swift */; };
+		CAA3B2472C960DFC00B1754B /* ErrorMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3B2462C960DFC00B1754B /* ErrorMessage.swift */; };
+		CAA3B2492C96100700B1754B /* AppBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA3B2482C96100700B1754B /* AppBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +41,10 @@
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA5B534A2C93CEE600F61B00 /* AboutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutListView.swift; sourceTree = "<group>"; };
 		CA5B534C2C93D39700F61B00 /* AboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutScreen.swift; sourceTree = "<group>"; };
+		CAA3B2412C960D0C00B1754B /* ArticlesScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesScreen.swift; sourceTree = "<group>"; };
+		CAA3B2442C960DC300B1754B /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		CAA3B2462C960DFC00B1754B /* ErrorMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessage.swift; sourceTree = "<group>"; };
+		CAA3B2482C96100700B1754B /* AppBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,13 +86,13 @@
 		7555FF7D242A565900829871 /* iosApp */ = {
 			isa = PBXGroup;
 			children = (
+				CAA3B2432C960DB100B1754B /* Layout */,
+				CAA3B2402C960CDD00B1754B /* Screens */,
 				058557BA273AAA24004C7B11 /* Assets.xcassets */,
 				7555FF82242A565900829871 /* ContentView.swift */,
 				7555FF8C242A565B00829871 /* Info.plist */,
 				2152FB032600AC8F00CF470E /* iOSApp.swift */,
 				058557D7273AAEEB004C7B11 /* Preview Content */,
-				CA5B534A2C93CEE600F61B00 /* AboutListView.swift */,
-				CA5B534C2C93D39700F61B00 /* AboutScreen.swift */,
 			);
 			path = iosApp;
 			sourceTree = "<group>";
@@ -94,6 +102,26 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CAA3B2402C960CDD00B1754B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CA5B534A2C93CEE600F61B00 /* AboutListView.swift */,
+				CA5B534C2C93D39700F61B00 /* AboutScreen.swift */,
+				CAA3B2412C960D0C00B1754B /* ArticlesScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CAA3B2432C960DB100B1754B /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CAA3B2442C960DC300B1754B /* Loader.swift */,
+				CAA3B2462C960DFC00B1754B /* ErrorMessage.swift */,
+				CAA3B2482C96100700B1754B /* AppBar.swift */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,8 +216,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAA3B2422C960D0C00B1754B /* ArticlesScreen.swift in Sources */,
+				CAA3B2472C960DFC00B1754B /* ErrorMessage.swift in Sources */,
 				CA5B534B2C93CEE600F61B00 /* AboutListView.swift in Sources */,
+				CAA3B2452C960DC300B1754B /* Loader.swift in Sources */,
 				2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */,
+				CAA3B2492C96100700B1754B /* AppBar.swift in Sources */,
 				7555FF83242A565900829871 /* ContentView.swift in Sources */,
 				CA5B534D2C93D39700F61B00 /* AboutScreen.swift in Sources */,
 			);

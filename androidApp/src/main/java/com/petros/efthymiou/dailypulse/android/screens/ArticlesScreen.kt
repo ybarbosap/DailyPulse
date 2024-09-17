@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
@@ -24,10 +28,17 @@ import com.petros.efthymiou.dailypulse.articles.Article
 import com.petros.efthymiou.dailypulse.articles.ArticlesViewModel
 
 @Composable
-fun ArticleScreen(viewModel: ArticlesViewModel) {
+fun ArticleScreen(viewModel: ArticlesViewModel, onAboutButtonClick: () -> Unit) {
     val articleState = viewModel.articlesState.collectAsState()
     Column {
-        AppBar(title = "Articles")
+        AppBar(title = "Articles", actions = {
+            IconButton(onAboutButtonClick) {
+                Icon(
+                    imageVector = Icons.Outlined.Info,
+                    contentDescription = ""
+                )
+            }
+        })
         when {
             articleState.value.isLoading -> {
                 Loader()
@@ -67,7 +78,7 @@ private fun ArticleItemView(article: Article) {
             style = TextStyle(fontWeight = FontWeight.Bold, fontSize = 22.sp)
         )
         Spacer(modifier = Modifier.height(8.dp))
-        Text(text = article.description)
+        Text(text = article.desc)
         Spacer(modifier = Modifier.height(4.dp))
         Text(
             text = article.date,
